@@ -1,0 +1,5 @@
+# 啟用虛擬環境 (Windows)
+venv\Scripts\activate
+
+啟動伺服器：
+uvicorn main:app --reload
