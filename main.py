@@ -1,6 +1,17 @@
 from fastapi import FastAPI
 from routers import user,auth
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi import FastAPI
+from middlewares.logging import LoggingMiddleware
+# main.py
+from middlewares.logging_middleware import LoggingMiddleware
+app.add_middleware(LoggingMiddleware)
+
+from core.logging_config import setup_logging
+
+setup_logging()
+app = FastAPI()
+app.add_middleware(LoggingMiddleware)
 
 app = FastAPI()
 
